@@ -9,6 +9,7 @@ namespace EFCoreDigitalLibrary
 
         public AppContext()
         {
+            Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 
