@@ -37,5 +37,10 @@
             user.Name = name;
             _db.SaveChanges();
         }
+
+        public int BooksCount(string name)
+        {
+            return _db.Users.Where(x => x.Name == name).Select(x => x.Books).Count();
+        }
     }
 }
